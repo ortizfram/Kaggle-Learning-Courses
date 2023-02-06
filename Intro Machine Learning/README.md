@@ -99,3 +99,5 @@ print(X.head())
 print("The predictions are")
 print(melbourne_model.predict(X.head()))
 ```
+## 2.6 first machine learning model execise
+see execise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Intro%20Machine%20Learning/exercise-your-first-machine-learning-model.ipynb)
