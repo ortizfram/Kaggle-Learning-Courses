@@ -143,4 +143,4 @@ val_predictions = melbourne_model.predict(val_X)
 print(mean_absolute_error(val_y, val_predictions))
 ```
 ## 3.2 Exercise: Model Validation
-see it [here]()
+see it [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Intro%20Machine%20Learning/exercise-model-validation.ipynb)
