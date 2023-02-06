@@ -186,3 +186,5 @@ There is likely room for further improvement, but this is a big improvement over
 
 ## 4.2 Exercise: Random Forests
 you see it [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Intro%20Machine%20Learning/exercise-random-forests.ipynb)
+## 5.0 machine learning competition
+see code [here]()
