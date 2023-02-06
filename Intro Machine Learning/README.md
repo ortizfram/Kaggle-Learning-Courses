@@ -19,6 +19,7 @@ You can capture more factors using a tree that has more "splits." These are call
 <img src="https://user-images.githubusercontent.com/51888893/217027388-6f42f47c-8c69-4734-9084-93472ce1a5e3.png" width=500px>
 
 ***the bottom in the prediction is called ("leaf")***
+
 ---
 # 1.2 Basic Data Exploration
 ```py
