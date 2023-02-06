@@ -103,3 +103,16 @@ print(melbourne_model.predict(X.head()))
 see execise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Intro%20Machine%20Learning/exercise-your-first-machine-learning-model.ipynb)
 
 # 3.0 Model Validation
+the relevant measure of model quality is predictive accuracy. In other words, ***will the model's predictions be close to what actually happens.***
+
+If you compare predicted and actual home values for 10,000 houses, you'll likely find mix of good and bad predictions. Looking through a list of 10,000 predicted and actual values would be pointless. We need to summarize this into a single metric.
+
+There are many metrics for summarizing model quality, but we'll start with one called ***Mean Absolute Error (also called MAE)***. Let's break down this metric starting with the last word, error.
+
+***The prediction error for each house is:***
+```py
+error=actual−predicted
+```
+With the ****MAE metric**** , we take the absolute value of each error. This converts each error to a positive number. We then take the average of those absolute errors. This is our measure of model quality. In plain English, it can be said as
+
+> On average, our predictions are off by about X.
