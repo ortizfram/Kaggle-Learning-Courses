@@ -11,7 +11,7 @@ Machine learning works the same way. We'll start with a model called the Decisio
 
 This step of capturing patterns from data is called ***fitting or training the model***
 
-### how to improve decision tree
+#### how to improve decision tree
 You can capture more factors using a tree that has more "splits." These are called "deeper" trees. A decision tree that also considers the total size of each house's lot might look like this:
 
 ***"deeper trees"***
@@ -21,7 +21,7 @@ You can capture more factors using a tree that has more "splits." These are call
 ***the bottom in the prediction is called ("leaf")***
 
 ---
-# 1.2 Basic Data Exploration
+## 1.2 Basic Data Exploration
 ```py
 import pandas as pd
 ```
@@ -34,5 +34,7 @@ We load and explore the data with the following commands:
       # print a summary of the data in Melbourne data
       melbourne_data.describe()
 ```
-# 1.3 basic-data-exploration exercise
+## 1.3 basic-data-exploration exercise
 see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Intro%20Machine%20Learning/exercise-explore-your-data.ipynb)
+
+# 2.0
