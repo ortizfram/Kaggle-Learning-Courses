@@ -185,4 +185,4 @@ print(mean_absolute_error(val_y, melb_preds))
 There is likely room for further improvement, but this is a big improvement over the best decision tree error of 250,000. There are parameters which allow you to change the performance of the Random Forest much as we changed the maximum depth of the single decision tree. But one of the best features of Random Forest models is that they generally work reasonably even without this tuning.
 
 ## 4.2 Exercise: Random Forests
-you see it [here]()
+you see it [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Intro%20Machine%20Learning/exercise-random-forests.ipynb)
