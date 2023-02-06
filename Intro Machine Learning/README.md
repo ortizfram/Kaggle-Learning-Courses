@@ -167,4 +167,4 @@ Here's the takeaway: Models can suffer from either:
 - Underfitting: failing to capture relevant patterns, again leading to less accurate predictions.
 We use validation data, which isn't used in model training, to measure a candidate model's accuracy. This lets us try many candidate models and keep the best one.
 ## 3.5 Exercise: Underfitting and Overfitting
-here you can see [it]()
+here you can see [it](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Intro%20Machine%20Learning/exercise-underfitting-and-overfitting.ipynb)
