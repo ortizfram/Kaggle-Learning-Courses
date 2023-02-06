@@ -39,7 +39,7 @@ see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/ma
 
 # 2.0 Your First Machine Learning Model
 
-## Selecting Data for Modeling
+## 2.1Selecting Data for Modeling
 
 ```py
 melbourne_data.columns
@@ -54,14 +54,14 @@ melbourne_data.columns
 # dropna drops missing values (think of na as "not available")
 melbourne_data = melbourne_data.dropna(axis=0)
 ```
-## Selecting The Prediction Target
+## 2.3 Selecting The Prediction Target
 You can pull out a variable with dot-notation.
 
 We'll use the dot notation to select the column we want to predict, which is called the ***prediction target.*** By convention, the prediction target ***is called y.***
 ```py
 y = melbourne_data.Price
 ```
-## Choosing "Features"
+## 2.4 Choosing "Features"
  In our case, those would be the columns used to determine the home price. Sometimes, you will use all columns except the target as features. ***Other times you'll be better off with fewer features.***
 ```py
 melbourne_features = ['Rooms', 'Bathroom', 'Landsize', 'Lattitude', 'Longtitude']
@@ -76,7 +76,7 @@ X = melbourne_data[melbourne_features]
 X.describe()
 X.head()
 ```
-## Building Your Model
+## 2.5 Building Your Model
 scikit-learn 
 
 The steps to building and using a model are:
