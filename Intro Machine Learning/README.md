@@ -144,3 +144,27 @@ print(mean_absolute_error(val_y, val_predictions))
 ```
 ## 3.2 Exercise: Model Validation
 see it [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Intro%20Machine%20Learning/exercise-model-validation.ipynb)
+## 3.3 Underfitting and Overfitting
+Fine-tune your model for better performance.
+
+we want to find the sweet spot between underfitting and overfitting. Visually, we want the low point of the (red) validation curve in the figure below.
+```py
+# compare MAE with differing values of max_leaf_nodes
+for max_leaf_nodes in [5, 50, 500, 5000]:
+    my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
+    print("Max leaf nodes: %d  \t\t Mean Absolute Error:  %d" %(max_leaf_nodes, my_mae))
+```
+      Max leaf nodes: 5  		 Mean Absolute Error:  347380
+      Max leaf nodes: 50  		 Mean Absolute Error:  258171
+      Max leaf nodes: 500  		 Mean Absolute Error:  243495
+      Max leaf nodes: 5000  		 Mean Absolute Error:  254983
+
+      Of the options listed, 500 is the optimal number of leaves.
+## 3.4 Conclusion
+Here's the takeaway: Models can suffer from either:
+
+- Overfitting: capturing spurious patterns that won't recur in the future, leading to less accurate predictions, or
+- Underfitting: failing to capture relevant patterns, again leading to less accurate predictions.
+We use validation data, which isn't used in model training, to measure a candidate model's accuracy. This lets us try many candidate models and keep the best one.
+## 3.5 Exercise: Underfitting and Overfitting
+here you can see [it]()
