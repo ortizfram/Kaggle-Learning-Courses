@@ -170,3 +170,16 @@ We use validation data, which isn't used in model training, to measure a candida
 here you can see [it](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Intro%20Machine%20Learning/exercise-underfitting-and-overfitting.ipynb)
 
 # 4.0 Random Forests
+build
+```py
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error
+
+forest_model = RandomForestRegressor(random_state=1)
+forest_model.fit(train_X, train_y)
+melb_preds = forest_model.predict(val_X)
+print(mean_absolute_error(val_y, melb_preds))
+```
+      191669.7536453626
+## 4.1 Conclusion
+There is likely room for further improvement, but this is a big improvement over the best decision tree error of 250,000. There are parameters which allow you to change the performance of the Random Forest much as we changed the maximum depth of the single decision tree. But one of the best features of Random Forest models is that they generally work reasonably even without this tuning.
