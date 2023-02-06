@@ -34,4 +34,5 @@ We load and explore the data with the following commands:
       # print a summary of the data in Melbourne data
       melbourne_data.describe()
 ```
-# 1.3 [basic-data-exploration exercise][]
+# 1.3 basic-data-exploration exercise
+see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Intro%20Machine%20Learning/exercise-explore-your-data.ipynb)
