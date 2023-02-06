@@ -33,3 +33,4 @@ We load and explore the data with the following commands:
       # print a summary of the data in Melbourne data
       melbourne_data.describe()
 ```
+# 1.3 [basic-data-exploration exercise][]
