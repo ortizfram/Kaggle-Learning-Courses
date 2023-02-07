@@ -82,3 +82,41 @@ trails.plot(color='black', markersize=1, ax=ax)
 
 ## 1.3 Exercise: Your First Map
 see code [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Geospatial%20Analysis/exercise-your-first-map.ipynb)
+# 2.0 Coordinate Reference Systems
+It's pretty amazing that we can represent the Earth's surface in 2 dimensions!
+ the world is actually a three-dimensional globe. So we have to use a method called a ***map projection*** to render it as a flat surface.
+ 
+- the equal-area projections (like "Lambert Cylindrical Equal Area", or "Africa Albers Equal Area Conic") preserve area. This is a good choice, if you'd like to calculate the area of a country or city, for example.
+- the equidistant projections (like "Azimuthal Equidistant projection") preserve distance. This would be a good choice for calculating flight distance.
+<img src="https://user-images.githubusercontent.com/51888893/217352930-8af47532-b3c6-475b-bbf2-cb6f5c822e5f.png" width=600px>
+
+We use a coordinate reference system (CRS) to show how the projected points correspond to real locations on Earth
+## 1.4 Setting the CRS
+When we create a GeoDataFrame from a shapefile, the CRS is already imported for us.
+```py
+# Load a GeoDataFrame containing regions in Ghana
+regions = gpd.read_file("../input/geospatial-learn-course-data/ghana/ghana/Regions/Map_of_Regions_in_Ghana.shp")
+print(regions.crs)
+```
+            epsg:32630
+This GeoDataFrame uses EPSG 32630, which is more commonly called the "Mercator" projection. This projection preserves angles (making it useful for sea navigation) and slightly distorts area.
+
+However, when creating a GeoDataFrame from a CSV file, we have to set the CRS. EPSG 4326 corresponds to coordinates in latitude and longitude.
+```py
+# Create a DataFrame with health facilities in Ghana
+facilities_df = pd.read_csv("../input/geospatial-learn-course-data/ghana/ghana/health_facilities.csv")
+
+# Convert the DataFrame to a GeoDataFrame
+facilities = gpd.GeoDataFrame(facilities_df, geometry=gpd.points_from_xy(facilities_df.Longitude, facilities_df.Latitude))
+
+# Set the coordinate reference system (CRS) to EPSG 4326
+facilities.crs = {'init': 'epsg:4326'}
+
+# View the first five rows of the GeoDataFrame
+facilities.head()
+```
+- We begin by creating a DataFrame containing columns with latitude and longitude coordinates.
+- To convert it to a GeoDataFrame, we use gpd.GeoDataFrame().
+- The gpd.points_from_xy() function creates Point objects from the latitude and longitude columns.
+# 1.5 Exercise: Coordinate Reference Systems
+see it [here]()
