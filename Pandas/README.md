@@ -144,3 +144,39 @@ reviews['index_backwards']
 ```
 ## 2.6 Exercise: Indexing, Selecting & Assigning
 see it [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Pandas/exercise-indexing-selecting-assigning.ipynb)
+
+# 3.0 Summary Functions and Maps
+Extract insights from your data.
+```py
+reviews.describe()
+reviews.taster_name.describe()
+```
+```py
+reviews.points.mean()
+```
+```py
+reviews.taster_name.unique()
+```
+```py
+reviews.taster_name.value_counts()
+```
+To see a list of unique values and how often they occur in the dataset `value_counts()`
+-  high-level ****summary of the attributes**** for ****numerical data****
+## 3.1 Maps
+ creating new representations from existing data, or for transforming data from the format it is in now to the format that we want it to be in later
+ `.map()`
+```py
+review_points_mean = reviews.points.mean()
+reviews.points.map(lambda p: p - review_points_mean)
+```
+`apply()` is the equivalent method if we want to transform a whole DataFrame by calling a custom method on each row.
+```py
+def remean_points(row):
+    row.points = row.points - review_points_mean
+    return row
+
+reviews.apply(remean_points, axis='columns')
+```
+- both create new serie or df , and does not apply in the original one
+## 3.2 Exercise: Summary Functions and Maps
+see exercise [here]()
