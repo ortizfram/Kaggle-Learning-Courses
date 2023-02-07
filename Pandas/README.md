@@ -229,4 +229,4 @@ see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/ma
 # 5.0 Exercise: Data Types and Missing Values
 see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Pandas/exercise-data-types-and-missing-values.ipynb)
 # 6.0 Renaming and Combining
-see exercise [here]()
+see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Pandas/exercise-renaming-and-combining.ipynb)
