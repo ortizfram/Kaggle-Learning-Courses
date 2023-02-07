@@ -68,4 +68,4 @@ wine_reviews.head()
 <img src="https://user-images.githubusercontent.com/51888893/217237327-fdc9d8a6-6a7a-485e-a19e-632f15c08ee1.png" width=500px>
 
 ## 1.3 Exercise: Creating, Reading and Writing
-see exercise [here]()
+see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Pandas/exercise-creating-reading-and-writing.ipynb)
