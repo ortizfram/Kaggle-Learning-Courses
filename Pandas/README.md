@@ -224,3 +224,5 @@ countries_reviewed.sort_index()
 # sort by more than one column at a time:
 countries_reviewed.sort_values(by=['country', 'len'])
 ```
+## 4.3 Exercise: Grouping and Sorting
+see exercise [here]()
