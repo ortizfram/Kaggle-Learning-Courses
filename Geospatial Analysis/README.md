@@ -81,4 +81,4 @@ trails.plot(color='black', markersize=1, ax=ax)
 <img src="https://user-images.githubusercontent.com/51888893/217347790-364adb8c-80f9-4eb7-a65c-abf89c1d3149.png" width=600px>
 
 ## 1.3 Exercise: Your First Map
-see code [here]()
+see code [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Geospatial%20Analysis/exercise-your-first-map.ipynb)
