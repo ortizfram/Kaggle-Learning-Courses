@@ -69,3 +69,76 @@ wine_reviews.head()
 
 ## 1.3 Exercise: Creating, Reading and Writing
 see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Pandas/exercise-creating-reading-and-writing.ipynb)
+# 2.0 Indexing, Selecting & Assigning
+## 2.1 access a col
+```py
+reviews.country
+# or
+reviews['country']
+
+# access first in col 
+reviews['country'][0]
+```
+## 2.2 Indexing in pandas
+- `iloc` for numerical position in the data
+```py
+# fist val
+reviews.iloc[0]
+
+# every record from col 0
+reviews.iloc[:, 0]
+
+# from 0 to 3 in 1st col
+reviews.iloc[:3, 0]
+
+#  select just the second and third entries,
+reviews.iloc[1:3, 0]
+
+#  pass a list:
+reviews.iloc[[0, 1, 2], 0]
+
+# last five elements of the dataset.
+reviews.iloc[-5:]
+```
+- `loc` for label-based selection
+```py
+# first record in country
+reviews.loc[0, 'country']
+
+# select every record from these cols
+reviews.loc[:, ['taster_name', 'taster_twitter_handle', 'points']]
+```
+## 2.3 Manipulating the index
+```py
+# set a column as index
+reviews.set_index("title")
+```
+## 2.4 conditionals
+```py
+# return records of this condition
+reviews.loc[reviews.country == 'Italy']
+
+# more than 1 condition 
+reviews.loc[(reviews.country == 'Italy') & (reviews.points >= 90)]
+
+# if 1 of both condition meets, return
+reviews.loc[(reviews.country == 'Italy') | (reviews.points >= 90)]
+```
+```py
+# isin : if exists return
+reviews.loc[reviews.country.isin(['Italy', 'France'])]
+```
+```py
+# isnull, notnull
+reviews.loc[reviews.price.notnull()]
+```
+## 2.5 Assigning data
+```py
+reviews['critic'] = 'everyone'
+reviews['critic']
+```
+```py
+# iterable variables
+reviews['index_backwards'] = range(len(reviews), 0, -1)
+reviews['index_backwards']
+```
