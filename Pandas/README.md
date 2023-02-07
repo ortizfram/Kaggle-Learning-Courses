@@ -179,4 +179,4 @@ reviews.apply(remean_points, axis='columns')
 ```
 - both create new serie or df , and does not apply in the original one
 ## 3.2 Exercise: Summary Functions and Maps
-see exercise [here]()
+see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Pandas/exercise-summary-functions-and-maps.ipynb)
