@@ -143,4 +143,4 @@ reviews['index_backwards'] = range(len(reviews), 0, -1)
 reviews['index_backwards']
 ```
 ## 2.6 Exercise: Indexing, Selecting & Assigning
-see it [here]()
+see it [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Pandas/exercise-indexing-selecting-assigning.ipynb)
