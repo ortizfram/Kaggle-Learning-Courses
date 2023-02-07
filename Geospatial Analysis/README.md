@@ -47,5 +47,38 @@ wild_lands.plot()
 # View the first five entries in the "geometry" column
 wild_lands.geometry.head()
 ```
+
+            POLYGON ((486093.245 4635308.586, 486787.235 4...
+            1    POLYGON ((491931.514 4637416.256, 491305.424 4...
+            2    POLYGON ((486000.287 4635834.453, 485007.550 4...
+            3    POLYGON ((541716.775 4675243.268, 541217.579 4...
+            4    POLYGON ((583896.043 4909643.187, 583891.200 4...
 While this column can contain a variety of different datatypes, each entry will typically be a ****Point, LineString, or Polygon.****
 <img src="https://user-images.githubusercontent.com/51888893/217291656-43f90d10-507a-4709-a3e8-40fff76bc25c.png" width=900px>
+
+```py
+# Campsites in New York state (Point)
+POI_data = gpd.read_file("../input/geospatial-learn-course-data/DEC_pointsinterest/DEC_pointsinterest/Decptsofinterest.shp")
+campsites = POI_data.loc[POI_data.ASSET=='PRIMITIVE CAMPSITE'].copy()
+
+# Foot trails in New York state (LineString)
+roads_trails = gpd.read_file("../input/geospatial-learn-course-data/DEC_roadstrails/DEC_roadstrails/Decroadstrails.shp")
+trails = roads_trails.loc[roads_trails.ASSET=='FOOT TRAIL'].copy()
+
+# County boundaries in New York state (Polygon)
+counties = gpd.read_file("../input/geospatial-learn-course-data/NY_county_boundaries/NY_county_boundaries/NY_county_boundaries.shp")
+```
+Next, we create a map from all four GeoDataFrames.
+```py
+# Define a base map with county boundaries
+ax = counties.plot(figsize=(10,10), color='none', edgecolor='gainsboro', zorder=3)
+
+# Add wild lands, campsites, and foot trails to the base map
+wild_lands.plot(color='lightgreen', ax=ax)
+campsites.plot(color='maroon', markersize=2, ax=ax)
+trails.plot(color='black', markersize=1, ax=ax)
+```
+<img src="https://user-images.githubusercontent.com/51888893/217347790-364adb8c-80f9-4eb7-a65c-abf89c1d3149.png" width=600px>
+
+## 1.3 Exercise: Your First Map
+see code [here]()
