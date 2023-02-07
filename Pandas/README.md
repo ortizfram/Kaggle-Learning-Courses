@@ -142,3 +142,5 @@ reviews['critic']
 reviews['index_backwards'] = range(len(reviews), 0, -1)
 reviews['index_backwards']
 ```
+## 2.6 Exercise: Indexing, Selecting & Assigning
+see it [here]()
