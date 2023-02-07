@@ -227,4 +227,4 @@ countries_reviewed.sort_values(by=['country', 'len'])
 ## 4.3 Exercise: Grouping and Sorting
 see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Pandas/exercise-grouping-and-sorting.ipynb)
 # 5.0 Exercise: Data Types and Missing Values
-see exercise [here]()
+see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Pandas/exercise-data-types-and-missing-values.ipynb)
