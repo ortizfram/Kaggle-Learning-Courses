@@ -182,3 +182,45 @@ reviews.apply(remean_points, axis='columns')
 see exercise [here](https://github.com/ortizfram/Kaggle-Learning-Courses/blob/main/Pandas/exercise-summary-functions-and-maps.ipynb)
 # 4.0 Grouping and Sorting
 Scale up your level of insight. The more complex the dataset, the more this matters
+```py
+# same as unique.value_counts but with group by
+reviews.groupby('points').points.count()
+```
+```py
+reviews.groupby('points').price.min()
+```
+```py
+# selecting the name of the first wine reviewed from each winery in the dataset:
+reviews.groupby('winery').apply(lambda df: df.title.iloc[0])
+```
+```py
+#  the best wine by country and province:
+reviews.groupby(['country', 'province']).apply(lambda df: df.loc[df.points.idxmax()])
+```
+Another groupby() method worth mentioning is `agg()`, which lets you run a bunch of different functions on your DataFrame simultaneously. For example, we can generate a simple statistical summary of the dataset as follows:
+```py
+reviews.groupby(['country']).price.agg([len, min, max])
+```
+## 4.1 Multi-indexes
+```py
+countries_reviewed = reviews.groupby(['country', 'province']).description.agg([len])
+countries_reviewed
+```
+```py
+countries_reviewed.reset_index()
+```
+## 4.2 sorting 
+```py
+countries_reviewed = countries_reviewed.reset_index()
+countries_reviewed.sort_values(by='len')
+```
+```py
+countries_reviewed.sort_values(by='len', ascending=False)
+```
+```py
+countries_reviewed.sort_index()
+```
+```py
+# sort by more than one column at a time:
+countries_reviewed.sort_values(by=['country', 'len'])
+```
