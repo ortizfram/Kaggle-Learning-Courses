@@ -66,3 +66,6 @@ wine_reviews = pd.read_csv("../input/wine-reviews/winemag-data-130k-v2.csv", ind
 wine_reviews.head()
 ```
 <img src="https://user-images.githubusercontent.com/51888893/217237327-fdc9d8a6-6a7a-485e-a19e-632f15c08ee1.png" width=500px>
+
+## 1.3 Exercise: Creating, Reading and Writing
+see exercise [here]()
